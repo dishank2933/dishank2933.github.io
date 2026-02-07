@@ -1,3 +1,24 @@
+// ===== Dark Mode Toggle =====
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+// Set dark mode as default
+if (!localStorage.getItem('theme')) {
+    localStorage.setItem('theme', 'dark');
+}
+
+// Apply saved theme on load
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+    body.classList.add('dark-mode');
+}
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+});
+
 // ===== Navbar Scroll Effect =====
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-link');
