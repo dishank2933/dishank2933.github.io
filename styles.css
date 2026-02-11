@@ -1041,87 +1041,42 @@ section:first-of-type::before {
 
 .certificates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 2rem;
-    max-width: 1100px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .certificate-card {
     background: var(--bg-card);
-    padding: 2.5rem;
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-md);
+    padding: 1.75rem;
+    border-radius: 8px;
     border: 1px solid var(--border-color);
-    transition: var(--transition-base);
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    position: relative;
-    overflow: hidden;
 }
 
-.certificate-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--gradient-primary);
-    opacity: 0;
-    transition: var(--transition-base);
-}
-
-.certificate-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-2xl);
-    border-color: var(--primary-color);
-}
-
-.certificate-card:hover::before {
-    opacity: 1;
-}
-
-.certificate-icon {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--gradient-primary);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-lg);
-}
-
-.certificate-icon i {
-    font-size: 2rem;
-    color: white;
-}
-
-.certificate-content h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
+.certificate-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
 }
 
 .certificate-issuer {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
     margin-bottom: 0.75rem;
 }
 
 .certificate-description {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
 }
 
 .btn-small {
-    padding: 0.625rem 1.25rem;
+    padding: 0.5rem 1rem;
     font-size: 0.875rem;
     display: inline-flex;
     align-items: center;
